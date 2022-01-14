@@ -1,0 +1,141 @@
+env:
+  # TERM variable
+  #
+  # This value is used to set the `$TERM` environment variable for
+  # each instance of Alacritty. If it is not present, alacritty will
+  # check the local terminfo database and use `alacritty` if it is
+  # available, otherwise `xterm-256color` is used.
+  TERM: xterm-256color
+
+window:
+
+  # Window padding (changes require restart)
+  #
+  # Blank space added around the window in pixels. This padding is scaled
+  # by DPI and the specified value is always added at both opposing sides.
+  padding:
+    x: 2
+    y: 2
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: false
+
+  # Window title
+  title: Alacritty
+
+  # Window class (Linux/BSD only):
+  class:
+    # Application instance name
+    instance: Alacritty
+    # General application class
+    general: Alacritty
+
+  # GTK theme variant (Linux/BSD only)
+  #
+  # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
+  # Set this to `None` to use the default theme variant.
+  #gtk_theme_variant: None
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 5000
+
+tabspaces: 4
+
+font:
+  normal:
+    family: OpenDyslexicMono
+    style:  Regular
+
+  bold:
+    family: OpenDyslexicMono
+    style:  Bold
+
+  italic:
+    family: OpenDyslexicMono
+    style:  Italic
+
+  bold_italic:
+    family: OpenDyslexicMono 
+    style:  BoldItalic
+
+  size: 12.0
+  offset:
+    x: 0
+    y: 1
+      
+  #glyph_offset:
+    #x: 0
+    #y: 0
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+
+#######################################
+##      START OF COLOR SCHEMES       ##
+#######################################
+schemes:
+
+### Palenight ###
+  Palenight: &Palenight
+    # Default colors
+    primary:
+      background: '#292d3e'
+      foreground: '#d0d0d0'
+
+    # Normal colors
+    normal:
+      black:   '#292d3e'
+      red:     '#f07178'
+      green:   '#c3e88d'
+      yellow:  '#ffcb6b'
+      blue:    '#82aaff'
+      magenta: '#c792ea'
+      cyan:    '#89ddff'
+      white:   '#d0d0d0'
+
+    # Bright colors
+    bright:
+      black:   '#434758'
+      red:     '#ff8b92'
+      green:   '#ddffa7'
+      yellow:  '#ffe585'
+      blue:    '#9cc4ff'
+      magenta: '#e1acff'
+      cyan:    '#a3f7ff'
+      white:   '#ffffff'
+
+### ChousX ###
+  ChousX: &ChousX
+    # Default colors
+    primary:
+      background: '#1D1F2B'
+      foreground: '#F8E3FF'
+
+    # Normal colors
+    normal:
+      black:   '#1D1F2B'
+      red:     '#CC648F'
+      green:   '#369944'
+      yellow:  '#F4DB9F'
+      blue:    '#7592BF'
+      magenta: '#D80AF9'
+      cyan:    '#8B94FA'
+      white:   '#F8E3FF'
+
+    # Bright colors
+    bright:
+      black:   '#7B84B8'
+      red:     '#FF7DB3'
+      green:   '#50E664'
+      yellow:  '#FFFBD6'
+      blue:    '#9cc4ff'
+      magenta: '#FF458C'
+      cyan:    '#E0FAFD'
+      white:   '#ffffff'
+
+
+colors:  *ChousX
+
